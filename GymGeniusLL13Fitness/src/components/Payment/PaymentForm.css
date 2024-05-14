@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+
+  
+  .payment-card {
+    margin-left: 35%;
+    width: 30rem;
+    background-color: rgba(255,255,255,0.2);
+    backdrop-filter: blur(1.5rem);
+    border-radius: 1.2rem;
+    padding: 1.5rem;
+    box-shadow: 0 1rem 3rem -2rem #f48915, inset 0 0 0.2rem 0rem rgba(255,255,255,0.4);
+  }
+  
+  .payment-card__title {
+    font-weight: 600;
+    color: #f48915;
+    margin: 1rem 0 1.5rem;
+  }
+  
+  
+  .payment-card__field {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .payment-card__field--small {
+    max-width: 40%;
+  }
+  
+  .payment-card__extra-fields {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0 1rem;
+  }
+  
+  .payment-card__input {
+    background: none;
+    border: none;
+    border-bottom: dashed 0.15rem rgba(255,255,255,0.15);
+    font-family: 'JetBrains Mono', monospace;
+    color: #fff;
+    text-shadow: 0 2px 2px rgba(0,0,0,0.3);
+  }
+  
+  .payment-card__input:focus {
+    outline: none;
+    border-color: rgba(255,255,255,0.6);
+  }
+  
+  .payment-card__input::placeholder {
+    color: rgba(255,255,255,0.5);
+    text-shadow: none;
+  }
+  
+  .payment-card__field--large 
+  .payment-card__input {
+    font-size: 2rem;
+  }
+  
+  .payment-card__field--small 
+  .payment-card__input {
+    font-size: 1.2rem;
+  }
+  
+  .payment-card__field-label {
+    color: #fff;
+    text-shadow: 0 2px 2px rgba(0,0,0,0.4);
+    margin: 0 0 0.2rem;
+    font-weight: 400;
+  }
