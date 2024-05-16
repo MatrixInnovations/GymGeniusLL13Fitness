@@ -1,75 +1,60 @@
-* {
-    box-sizing: border-box;
-  }
-  
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+.payment-card {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
 
-  
-  .payment-card {
-    margin-left: 35%;
-    width: 30rem;
-    background-color: rgba(255,255,255,0.2);
-    backdrop-filter: blur(1.5rem);
-    border-radius: 1.2rem;
-    padding: 1.5rem;
-    box-shadow: 0 1rem 3rem -2rem #f48915, inset 0 0 0.2rem 0rem rgba(255,255,255,0.4);
-  }
-  
-  .payment-card__title {
-    font-weight: 600;
-    color: #f48915;
-    margin: 1rem 0 1.5rem;
-  }
-  
-  
-  .payment-card__field {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .payment-card__field--small {
-    max-width: 40%;
-  }
-  
-  .payment-card__extra-fields {
-    display: flex;
-    justify-content: space-between;
-    margin: 2rem 0 1rem;
-  }
-  
-  .payment-card__input {
-    background: none;
-    border: none;
-    border-bottom: dashed 0.15rem rgba(255,255,255,0.15);
-    font-family: 'JetBrains Mono', monospace;
-    color: #fff;
-    text-shadow: 0 2px 2px rgba(0,0,0,0.3);
-  }
-  
-  .payment-card__input:focus {
-    outline: none;
-    border-color: rgba(255,255,255,0.6);
-  }
-  
-  .payment-card__input::placeholder {
-    color: rgba(255,255,255,0.5);
-    text-shadow: none;
-  }
-  
-  .payment-card__field--large 
-  .payment-card__input {
-    font-size: 2rem;
-  }
-  
-  .payment-card__field--small 
-  .payment-card__input {
-    font-size: 1.2rem;
-  }
-  
-  .payment-card__field-label {
-    color: #fff;
-    text-shadow: 0 2px 2px rgba(0,0,0,0.4);
-    margin: 0 0 0.2rem;
-    font-weight: 400;
-  }
+.payment-card__title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+  color: #333;
+}
+
+.payment-card__field {
+  margin-bottom: 20px;
+}
+
+.payment-card__field--large {
+  width: 100%;
+}
+
+.payment-card__field-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+}
+
+.payment-card__input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.payment-card__input--large {
+  width: calc(100% - 22px);
+}
+
+.payment-card__button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.payment-card__button:hover {
+  background-color: #45a049;
+}
