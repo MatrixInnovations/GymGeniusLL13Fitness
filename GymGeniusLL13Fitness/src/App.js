@@ -7,23 +7,45 @@ import Programs from './components/Programs/Programs';
 import Reasons from './components/Reasons/Reasons';
 import Testimonials from './components/Testimonials/Testimonials';
 import PaymentForm from './components/Payment/PaymentForm';
-import { BrowserRouter as Router, Routes ,Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Elements } from '@stripe/react-stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
+
+const stripePromise = loadStripe('STRIPE_SECRET_KEY');
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/payment" element={<PaymentForm/>} />
+          <Route
+            key="payment"
+            path="/payment"
+            element={
+              <Elements key="paymentElements" stripe={stripePromise}>
+                <PaymentForm key="paymentForm" />
+              </Elements>
+            }
+          />
+          <Route
+            key="home"
+            path="/"
+            element={
+              <>
+                <Hero key="hero" />
+                <Programs key="programs" />
+                <Reasons key="reasons" />
+                <Plans key="plans" />
+                <Testimonials key="testimonials" />
+                <Elements key="homeElements" stripe={stripePromise}>
+                  <PaymentForm key="homePaymentForm" />
+                </Elements>
+                <Join key="join" />
+                <Footer key="footer" />
+              </>
+            }
+          />
         </Routes>
-        <Hero/>
-        <Programs/>
-        <Reasons/>
-        <Plans/>
-        <Testimonials/>
-        <Join/>
-        <PaymentForm/>
-        <Footer/>
       </Router>
     </div>
   );
